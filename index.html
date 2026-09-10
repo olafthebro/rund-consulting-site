@@ -369,7 +369,7 @@
       <div class="cap">
         <div class="tag">04 / APPLIED AI</div>
         <h3>Custom AI Agents &amp; Fine-Tuning</h3>
-        <p>Autonomous agent harnesses with permission gating, RAG systems, LoRA/QLoRA fine-tuning, and evaluation harnesses that prove quality before deployment.</p>
+        <p>Autonomous agent harnesses with permission gating, RAG systems, LoRA/QLoRA fine-tuning, evaluation harnesses that prove quality before deployment — and PHI-redaction gateways for regulated data.</p>
       </div>
     </div>
   </div>
@@ -383,6 +383,7 @@
       <div class="metric"><div class="num mono">48</div><div class="lbl">dermatology practices</div></div>
       <div class="metric"><div class="num mono">113K+</div><div class="lbl">appeal letters auto-drafted</div></div>
       <div class="metric"><div class="num mono">100%</div><div class="lbl">appeal coverage, same-day</div></div>
+      <div class="metric"><div class="num mono">0</div><div class="lbl">PHI leaks to third-party AI</div></div>
     </div>
   </div>
 </div>
@@ -456,6 +457,25 @@
             <span class="stat">Shareable player links</span>
           </div>
           <div class="cs-stack">Python · Django · PWA · Third-party rating API integration</div>
+        </div>
+      </div>
+
+      <div class="cs rev">
+        <div class="media-col">
+          <div class="media"><img src="assets/phiredact-summary.png" alt="PHI redaction gateway — executive summary dashboard"></div>
+          <div class="caption">EVERY OUTBOUND LLM CALL PASSES THROUGH THE GATEWAY · 0 KNOWN LEAKS</div>
+        </div>
+        <div class="cs-copy">
+          <div class="tag2">HEALTHCARE AI · COMPLIANCE</div>
+          <h3>PHI-Redaction Gateway for Cloud AI</h3>
+          <p>An OpenAI-compatible proxy that sits in front of every outbound LLM call, so patient data never reaches a third-party model. It detects PHI locally (rules plus NLP models), swaps each value for a deterministic reversible token, re-scans to catch misses, adds an independent second-opinion model pass, then forwards tokens only — restoring real values in the response. Token mappings are encrypted at rest and never leave the machine, and every leak signal is audited.</p>
+          <div class="cs-stats">
+            <span class="stat">46K+ calls/day routed</span>
+            <span class="stat">552K values swapped</span>
+            <span class="stat">0 known leaks</span>
+            <span class="stat">&lt;2% added latency</span>
+          </div>
+          <div class="cs-stack">Python · FastAPI · Presidio/spaCy · GLiNER · AES-encrypted token store</div>
         </div>
       </div>
 
