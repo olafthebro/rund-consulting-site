@@ -101,7 +101,7 @@
     color: var(--navy); max-width: 860px; letter-spacing: -0.025em;
   }
   .hero .sub {
-    margin-top: 22px; font-size: 19px; color: #4F6076; max-width: 600px; font-weight: 400;
+    margin-top: 20px; font-size: 19px; color: #4F6076; max-width: 600px; font-weight: 400;
   }
   .hero .sub b { color: var(--navy); font-weight: 600; }
   .cta-row { margin-top: 0; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
@@ -126,7 +126,8 @@
   .btn-ghost .arrow { color: #00E5FF; font-size: 15px; }
   .btn-ghost:hover { border-color: #00E5FF; color: #00E5FF; }
   .hero-meta { margin-top: 54px; display: flex; gap: 46px; flex-wrap: wrap; }
-  .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 44px; max-width: 460px; margin-bottom: 40px; }
+  .hero-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 56px;
+                max-width: 440px; margin: 28px 0; text-align: left; justify-items: start; }
   .hero-stat .num { font-family: 'Geist Mono'; font-size: 30px; font-weight: 500; color: var(--cyan-ink); letter-spacing: -0.01em; }
   .hero-stat .lbl { font-size: 13px; color: #4A5A70; letter-spacing: 0.05em; margin-top: 2px; }
 
