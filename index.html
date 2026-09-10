@@ -251,6 +251,38 @@
   .cs-stats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
   .cs-stack { margin-top: 14px; font-family: 'Geist Mono'; font-size: 10.5px; color: #5B6B80; letter-spacing: 0.04em; }
 
+  /* ---------- ABOUT PROFILE CARD ---------- */
+  .about-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 44px; align-items: start; }
+  .profile-card {
+    background: #FFFFFF; border: 1px solid var(--card-border); border-radius: 16px; padding: 26px 26px 22px;
+    box-shadow: 0 14px 34px rgba(24,55,87,.07);
+  }
+  .profile-top { display: flex; align-items: center; gap: 14px; padding-bottom: 18px; border-bottom: 1px solid var(--card-border); }
+  .profile-mark { width: 54px; height: 58px; flex: none; }
+  .profile-name { font-family: 'Outfit'; font-weight: 800; font-size: 19px; color: var(--navy); letter-spacing: .01em; }
+  .profile-role { font-family: 'Geist Mono'; font-size: 10.5px; letter-spacing: .12em; color: var(--cyan-ink); margin-top: 3px; }
+  .profile-rows { padding-top: 16px; display: flex; flex-direction: column; gap: 12px; }
+  .prow { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; }
+  .prow .k { font-size: 13px; color: #5A6B82; }
+  .prow .v { font-family: 'Geist Mono'; font-size: 13.5px; color: var(--navy); text-align: right; }
+  .profile-foot { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--card-border);
+                  font-family: 'Geist Mono'; font-size: 10.5px; color: #5B6B80; letter-spacing: .06em; }
+
+  /* ---------- BEFORE / AFTER PANEL ---------- */
+  .change-panel {
+    margin-top: 34px; background: #0E1726; border-radius: 16px; padding: 26px 30px 22px;
+    box-shadow: 0 20px 48px rgba(11,26,45,.22);
+  }
+  .change-panel .pt { font-family: 'Geist Mono'; font-size: 10px; letter-spacing: .2em; color: #00E5FF; text-transform: uppercase; }
+  .change-panel h3 { font-family: 'Outfit'; font-size: 19px; font-weight: 700; color: #fff; margin: 9px 0 18px; }
+  .change-row { display: grid; grid-template-columns: 1.05fr 1fr 1fr; gap: 12px; align-items: center;
+                padding: 12px 0; border-top: 1px solid rgba(255,255,255,.08); }
+  .change-row .what { font-size: 13.5px; color: #C7D6E8; }
+  .change-row .before { font-family: 'Geist Mono'; font-size: 12.5px; color: #8FA7C4; }
+  .change-row .after { font-family: 'Geist Mono'; font-size: 13px; color: #00E5FF; }
+  .change-head { display: grid; grid-template-columns: 1.05fr 1fr 1fr; gap: 12px; padding-bottom: 8px; }
+  .change-head span { font-family: 'Geist Mono'; font-size: 9.5px; letter-spacing: .18em; color: #7C93AF; text-transform: uppercase; }
+
   /* ---------- CREDENTIAL CHIPS ---------- */
   .cred-strip { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; max-width: 760px; }
   .cred {
@@ -625,15 +657,37 @@
 <section id="about">
   <div class="wrap">
     <h2 class="sec-title">Built by a practicing engineer</h2>
-    <p class="sec-intro" style="max-width:720px;">Rund Consulting Inc. is the AI &amp; automation consultancy of <b style="color:var(--navy); font-weight:700;">Dylan Rund</b> — a working engineer, not an agency. By day he is a Senior AI/ML Engineer &amp; Lead DevOps Engineer at PwC, leading DevOps for a client AI platform across multiple agent teams. That means the systems you hire him to build are the same class of system he ships professionally: production AI, automation, and data pipelines — 10+ years across AI platform engineering, cloud infrastructure, and enterprise delivery.</p>
-    <div class="cred-strip">
-      <span class="cred">16+ AWS CERTIFICATIONS</span>
-      <span class="cred">AZURE FUNDAMENTALS</span>
-      <span class="cred">KCNA · KUBERNETES</span>
-      <span class="cred">OCI MULTI-CLOUD ARCHITECT</span>
-      <span class="cred">GCP CLOUD ENGINEER</span>
-      <span class="cred">COMPTIA A+ / NET+ / SEC+ / CASP+</span>
+    <div class="about-grid">
+      <div>
+        <p class="sec-intro" style="max-width:720px;">Rund Consulting Inc. is the AI &amp; automation consultancy of <b style="color:var(--navy); font-weight:700;">Dylan Rund</b> — a working engineer, not an agency. By day he is a Senior AI/ML Engineer &amp; Lead DevOps Engineer at PwC, leading DevOps for a client AI platform across multiple agent teams. That means the systems you hire him to build are the same class of system he ships professionally: production AI, automation, and data pipelines — 10+ years across AI platform engineering, cloud infrastructure, and enterprise delivery.</p>
+        <div class="cred-strip">
+          <span class="cred">16+ AWS CERTIFICATIONS</span>
+          <span class="cred">AZURE FUNDAMENTALS</span>
+          <span class="cred">KCNA &middot; KUBERNETES</span>
+          <span class="cred">OCI MULTI-CLOUD ARCHITECT</span>
+          <span class="cred">GCP CLOUD ENGINEER</span>
+          <span class="cred">COMPTIA A+ / NET+ / SEC+ / CASP+</span>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="profile-top">
+          <svg class="profile-mark" viewBox="0 0 381 431" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M186.023 88.5C208.338 88.5 227.62 93.8411 243.846 104.544H243.845C260.149 115.101 268.269 132.128 268.269 155.508C268.268 167.805 265.396 178.539 259.635 187.693L259.636 187.694C254.178 196.481 247.274 203.448 238.929 208.591C246.521 222.05 254.018 235.606 261.417 249.259L267.171 259.438C272.925 269.598 278.679 279.703 284.434 289.752L284.862 290.5H228.812L228.67 290.238C222.57 279.004 216.568 267.769 210.665 256.535L210.664 256.532C204.816 245.207 198.967 233.978 193.118 222.847C191.623 223.019 190.045 223.105 188.385 223.105H157.898V290.5H108.5V88.5H186.023ZM157.898 183.384H185.139C194.497 183.384 202.051 181.041 207.844 176.399C213.808 171.581 216.806 164.837 216.806 156.099C216.806 146.548 213.891 139.624 208.147 135.213L208.141 135.208C202.553 130.769 194.71 128.518 184.548 128.518H157.898V183.384Z" fill="#183757"/><path d="M258 359L122 359C66.7715 359 22 314.228 22 259L22 122C22 66.7715 66.7715 22 122 22L259 22C314.228 22 359 66.7715 359 122L359 408.5" stroke="#183757" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            <div class="profile-name">Dylan Rund</div>
+            <div class="profile-role">FOUNDING ENGINEER &middot; RUND CONSULTING INC.</div>
+          </div>
+        </div>
+        <div class="profile-rows">
+          <div class="prow"><span class="k">Engineering experience</span><span class="v">10+ years</span></div>
+          <div class="prow"><span class="k">Cloud certifications</span><span class="v">20+ across 5 platforms</span></div>
+          <div class="prow"><span class="k">Current role</span><span class="v">Sr. AI/ML &amp; Lead DevOps, PwC</span></div>
+          <div class="prow"><span class="k">Clients automated</span><span class="v">58</span></div>
+          <div class="prow"><span class="k">Based in</span><span class="v">Casselberry, FL</span></div>
+        </div>
+        <div class="profile-foot">REMOTE &amp; ON-SITE &middot; dylan.rund@rundconsulting.com</div>
+      </div>
     </div>
+    
   </div>
 </section>
 
@@ -644,28 +698,37 @@
 
     <div class="prob-grid">
       <div class="prob">
-        <div class="prob-tag">DATA CHASING</div>
+        <div class="cap-head"><div class="prob-tag">DATA CHASING</div><span class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.6-4.6"/><path d="M11 8.5v5M8.5 11h5"/></svg></span></div>
         <h3>Information trapped in portals</h3>
         <p>Claims, reports, and statements that only exist behind logins get extracted, normalized, and delivered on a schedule — no one logging in at 6am to download files.</p>
       </div>
       <div class="prob">
-        <div class="prob-tag">REPETITIVE RECONCILIATION</div>
+        <div class="cap-head"><div class="prob-tag">REPETITIVE RECONCILIATION</div><span class="cap-icon"><svg viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="17" rx="2.5"/><path d="M8 9h8M8 13h8M8 17h4"/><path d="M16.5 17.5l1.2 1.2 2.3-2.6"/></svg></span></div>
         <h3>Month-end that takes days</h3>
         <p>Reconciliation, summarization, and invoice preparation become one deterministic run that finishes in minutes and is penny-exact by construction.</p>
       </div>
       <div class="prob">
-        <div class="prob-tag">VOLUME WORK</div>
+        <div class="cap-head"><div class="prob-tag">VOLUME WORK</div><span class="cap-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5V10M9.3 19.5V5.5M14.7 19.5v-8M20 19.5v-12"/></svg></span></div>
         <h3>Backlogs that grow faster than staff</h3>
         <p>Denials, appeals, review queues, and ticket triage get classified, prioritized, and drafted automatically — your team reviews and approves instead of starting from blank.</p>
       </div>
       <div class="prob">
-        <div class="prob-tag">JUDGEMENT AT SCALE</div>
+        <div class="cap-head"><div class="prob-tag">JUDGEMENT AT SCALE</div><span class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 4v16"/><path d="M6 8h12"/><path d="M6 8l-2.5 5h5L6 8Z"/><path d="M18 8l-2.5 5h5L18 8Z"/><path d="M9 20h6"/></svg></span></div>
         <h3>Decisions nobody has time to make consistently</h3>
         <p>LLM systems with evaluation harnesses that measure quality before deployment, so automated decisions stay explainable, auditable, and improvable.</p>
       </div>
     </div>
 
-    <div class="prob-cta">
+<div class="change-panel">
+      <div class="pt">What actually changed</div>
+      <h3>Work that moved off human hands</h3>
+      <div class="change-head"><span>Process</span><span>Before</span><span>Now</span></div>
+      <div class="change-row"><span class="what">Commission inquiries</span><span class="before">~150 / month, manual review</span><span class="after">~70 / month &middot; &minus;53%</span></div>
+      <div class="change-row"><span class="what">Appeal coverage on actionable denials</span><span class="before">partial manual subset</span><span class="after">100% &middot; same-day drafts</span></div>
+      <div class="change-row"><span class="what">Month-end reconciliation &amp; invoicing</span><span class="before">multi-day manual cycle</span><span class="after">automated run, penny-exact</span></div>
+      <div class="change-row"><span class="what">Ad-hoc reporting requests</span><span class="before">multi-day, several people</span><span class="after">answered in chat in minutes</span></div>
+    </div>
+        <div class="prob-cta">
       <span class="pc-label">Tell us what's eating your team's time</span>
       <a class="pc-mail" href="mailto:dylan.rund@rundconsulting.com">dylan.rund@rundconsulting.com</a>
       <span class="pc-note">Responses within one business day · Casselberry, FL — remote &amp; on-site</span>
