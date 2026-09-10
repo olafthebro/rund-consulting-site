@@ -144,7 +144,7 @@
     padding: 28px 28px; transition: border-color .2s, transform .2s;
   }
   .cap:hover { border-color: rgba(0,137,168,.45); box-shadow: 0 6px 20px rgba(24,55,87,.06); }
-  .cap-head { display: flex; align-items: center; gap: 13px; margin-bottom: 14px; }
+  .cap-head { display: flex; align-items: center; justify-content: space-between; gap: 13px; margin-bottom: 14px; }
   .cap-icon {
     width: 42px; height: 42px; flex: none; border-radius: 12px;
     background: rgba(0,229,255,.10); border: 1px solid rgba(0,150,180,.28);
@@ -361,22 +361,22 @@
     <p class="sec-intro">Every engagement ships as a working system in production — not a slide deck. Four core capabilities, each proven with paying clients.</p>
     <div class="cap-grid">
       <div class="cap">
-        <div class="cap-head"><span class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 3 3.5 7.5 12 12l8.5-4.5L12 3Z"/><path d="M4.5 12.5 12 16.5l7.5-4"/><path d="M4.5 16.8 12 20.8l7.5-4"/></svg></span><div class="tag">01 / PLATFORMS</div></div>
+        <div class="cap-head"><div class="tag">01 / PLATFORMS</div><span class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 3 3.5 7.5 12 12l8.5-4.5L12 3Z"/><path d="M4.5 12.5 12 16.5l7.5-4"/><path d="M4.5 16.8 12 20.8l7.5-4"/></svg></span></div>
         <h3>AI &amp; LLM Platform Engineering</h3>
         <p>Production agent platforms: runtimes, MCP services on Kubernetes, evaluation pipelines (MLflow/LangSmith), observability, and Terraform-managed infrastructure.</p>
       </div>
       <div class="cap">
-        <div class="cap-head"><span class="cap-icon"><svg viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 1 1-2.9-6.4"/><path d="M20.5 4v4.6h-4.6"/><circle cx="12" cy="12" r="2.4"/></svg></span><div class="tag">02 / AUTOMATION</div></div>
+        <div class="cap-head"><div class="tag">02 / AUTOMATION</div><span class="cap-icon"><svg viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 1 1-2.9-6.4"/><path d="M20.5 4v4.6h-4.6"/><circle cx="12" cy="12" r="2.4"/></svg></span></div>
         <h3>Billing &amp; RCM Automation</h3>
         <p>Denials engines, appeal-letter generation, month-end pipelines, EHR/PM integrations (ModMed, AdvancedMD), and QuickBooks Online invoicing — deterministic Python pipelines replacing manual cycles.</p>
       </div>
       <div class="cap">
-        <div class="cap-head"><span class="cap-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3.2"/><path d="M5 6v6c0 1.8 3.1 3.2 7 3.2s7-1.4 7-3.2V6"/><path d="M5 12v6c0 1.8 3.1 3.2 7 3.2s7-1.4 7-3.2v-6"/></svg></span><div class="tag">03 / DATA</div></div>
+        <div class="cap-head"><div class="tag">03 / DATA</div><span class="cap-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3.2"/><path d="M5 6v6c0 1.8 3.1 3.2 7 3.2s7-1.4 7-3.2V6"/><path d="M5 12v6c0 1.8 3.1 3.2 7 3.2s7-1.4 7-3.2v-6"/></svg></span></div>
         <h3>Data Pipelines &amp; Integration</h3>
         <p>API extraction, normalization, reconciliation at penny-exact accuracy, and reporting workbooks — connecting vendor portals, clearinghouses, and accounting systems.</p>
       </div>
       <div class="cap">
-        <div class="cap-head"><span class="cap-icon"><svg viewBox="0 0 24 24"><path d="M11 3.5l1.7 4.3 4.3 1.7-4.3 1.7L11 15.5 9.3 11.2 5 9.5l4.3-1.7L11 3.5Z"/><path d="M18 15l.9 2.2 2.1.9-2.1.9L18 21l-.9-2-2.1-.9 2.1-.9L18 15Z"/></svg></span><div class="tag">04 / APPLIED AI</div></div>
+        <div class="cap-head"><div class="tag">04 / APPLIED AI</div><span class="cap-icon"><svg viewBox="0 0 24 24"><path d="M11 3.5l1.7 4.3 4.3 1.7-4.3 1.7L11 15.5 9.3 11.2 5 9.5l4.3-1.7L11 3.5Z"/><path d="M18 15l.9 2.2 2.1.9-2.1.9L18 21l-.9-2-2.1-.9 2.1-.9L18 15Z"/></svg></span></div>
         <h3>Custom AI Agents &amp; Fine-Tuning</h3>
         <p>Autonomous agent harnesses with permission gating, RAG systems, LoRA/QLoRA fine-tuning, evaluation harnesses that prove quality before deployment — and PHI-redaction gateways for regulated data.</p>
       </div>
