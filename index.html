@@ -153,7 +153,7 @@
   .hero-stat .lbl { font-size: 13px; color: #4A5A70; letter-spacing: 0.05em; margin-top: 2px; }
 
   /* ---------- SECTION SHELL ---------- */
-  section { padding: 72px 0; }
+  section { padding: 72px 0; scroll-margin-top: 88px; }
   .sec-title { font-size: clamp(26px, 4vw, 36px); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; margin-bottom: 16px; }
   .sec-intro { color: var(--muted); max-width: 640px; font-size: 16px; margin-bottom: 44px; }
 
@@ -324,12 +324,7 @@
   .prob-tag { font-family: 'Geist Mono'; font-size: 10px; letter-spacing: 0.2em; color: var(--cyan-ink); margin-bottom: 10px; }
   .prob h3 { font-family: 'Outfit'; font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
   .prob p { color: #46586F; font-size: 13.5px; line-height: 1.6; }
-  .prob-cta { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--card-border); }
-  .pc-label { font-family: 'Outfit'; font-weight: 700; font-size: 22px; color: var(--navy); letter-spacing: -0.01em; }
-  .pc-mail { display: inline-block; margin-top: 12px; font-family: 'Geist Mono'; font-size: 17px;
-             color: var(--cyan-ink); border-bottom: 1px solid rgba(0,107,132,.35); padding-bottom: 2px; }
   .pc-mail:hover { color: var(--navy); border-color: var(--navy); }
-  .pc-note { margin-top: 14px; font-size: 12.5px; color: #4A5A70; }
 
   /* ---------- FOOTER ---------- */
   footer { border-top: 1px solid var(--card-border); padding: 34px 0; }
@@ -392,6 +387,41 @@
     .about-grid { grid-template-columns: 1fr; gap: 26px; }
     .prow { flex-wrap: wrap; }
     .pc-mail, .profile-role { overflow-wrap: anywhere; }
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact-card {
+    background: #FFFFFF; border: 1px solid var(--card-border); border-radius: 16px;
+    padding: 30px 34px; box-shadow: 0 14px 34px rgba(24,55,87,.07);
+  }
+  .contact-mail { font-family: 'Geist Mono'; font-size: 19px; color: var(--cyan-ink);
+                  border-bottom: 1px solid rgba(0,107,132,.35); padding-bottom: 3px; display: inline-block; }
+  .contact-meta { margin-top: 14px; font-size: 13.5px; color: #4A5A70; }
+  .contact-links { margin-top: 20px; display: flex; gap: 22px; flex-wrap: wrap; }
+  .contact-links a { font-family: 'Outfit'; font-weight: 600; font-size: 14.5px; color: var(--navy);
+                     border-bottom: 1px solid rgba(24,55,87,.22); padding-bottom: 2px; display: inline-block; }
+  .contact-links a:hover { color: var(--cyan-ink); border-color: var(--cyan-ink); }
+
+  /* ---------- MOBILE POLISH ---------- */
+  @media (max-width: 640px) {
+    .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .metric { padding: 26px 16px; }
+    .caption, .cs-stack, .cs-copy .tag2, .cap .tag, .lab-card .tag,
+    .metric .lbl, .step .n { font-size: 11.5px; }
+    .foot-links a, .contact-links a, .contact-mail { padding: 11px 0; }
+    .foot-links { gap: 14px 20px; }
+    .contact-card { padding: 24px 20px; }
+    .contact-mail { font-size: 16.5px; overflow-wrap: anywhere; }
+    .brand .name { font-size: 16.5px; }
+    .ph-sub { font-size: 12px; }
+    .cred, .attr, .profile-role, .prob-tag, .lab-card .tag, .cs-copy .tag2, .tag { font-size: 11.5px; }
+    footer .mono-note, .metric .lbl, .cap .tag { font-size: 11.5px; }
+    .sec-intro { margin-bottom: 22px; }
+    .sec-title { font-size: clamp(24px, 6.4vw, 32px); }
+    .profile-foot { line-height: 2; }
+    .profile-foot a, .brand { display: inline-block; min-height: 40px; }
+    .lab-card, .step, .cap { padding: 20px; }
+    .metric .num { font-size: 20px; }
   }
 </style>
 </head>
@@ -801,7 +831,7 @@
   </div>
 </section>
 
-<section id="contact">
+<section id="problems">
   <div class="wrap">
     <h2 class="sec-title">Let us solve the complicated, tedious problems</h2>
     <p class="sec-intro" style="max-width:660px">Most businesses aren't short on AI ideas — they're short on time. Somewhere in your operation there's a process that eats hours every week: pulling data out of portals, reconciling spreadsheets, chasing rejections, re-keying the same information twice. That's exactly the work modern AI and automation is good at, and it's the work we take off your plate.</p>
@@ -828,10 +858,20 @@
         <p>LLM systems with evaluation harnesses that measure quality before deployment, so automated decisions stay explainable, auditable, and improvable.</p>
       </div>
     </div>
-    <div class="prob-cta">
-      <div class="pc-label">Tell us what's eating your team's time</div>
-      <a class="pc-mail" href="mailto:dylan.rund@rundconsulting.com">dylan.rund@rundconsulting.com</a>
-      <div class="pc-note">Responses within one business day &middot; Casselberry, FL &mdash; remote &amp; on-site</div>
+    
+  </div>
+</section>
+<section id="contact">
+  <div class="wrap">
+    <h2 class="sec-title">Start a conversation</h2>
+    <p class="sec-intro">Tell us what is eating your team's time. A short call is usually enough to say whether it is worth automating &mdash; and what it would save.</p>
+    <div class="contact-card">
+      <a class="contact-mail" href="mailto:dylan.rund@rundconsulting.com">dylan.rund@rundconsulting.com</a>
+      <div class="contact-meta">Responses within one business day &middot; Casselberry, FL &mdash; remote &amp; on-site</div>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/dylan-rund/" target="_blank" rel="noopener me">LinkedIn</a>
+        <a href="#client-systems">See the work</a>
+      </div>
     </div>
   </div>
 </section>
@@ -870,5 +910,29 @@
 <!-- Analytics: paste the Cloudflare Web Analytics beacon here (Cloudflare dashboard -> Web Analytics -> Add site).
      Free, cookieless, no banner required. Example shape:
      <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"YOUR_TOKEN"}'></script> -->
+<script>
+/* Anchor robustness. Two things shifted the page AFTER a #contact jump and made it land
+   ~800px short: late web-font swap and lazy-loaded images above the anchor. Re-anchor at
+   several points instead of once. */
+(function(){
+  function reanchor(){
+    if (!location.hash) return;
+    var t;
+    try { t = document.querySelector(location.hash); } catch(e) { return; }
+    if (t) t.scrollIntoView();
+  }
+  function pinAll(){
+    [0, 80, 300, 800, 1500, 2500].forEach(function(ms){ setTimeout(reanchor, ms); });
+  }
+  window.addEventListener('hashchange', pinAll);
+  window.addEventListener('load', function(){
+    pinAll();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ reanchor(); });
+    Array.prototype.forEach.call(document.images, function(img){
+      if (!img.complete) img.addEventListener('load', reanchor, { once: true });
+    });
+  });
+})();
+</script>
 </body>
 </html>
