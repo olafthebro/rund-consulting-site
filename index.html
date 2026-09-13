@@ -210,6 +210,7 @@
   /* ---------- LAB SECTION ---------- */
   .lab { background: #EEF3F9; }
   .lab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .lab-grid > * { min-width: 0; }
   .lab-card {
     background: #FFFFFF;
     border: 1px solid var(--card-border); border-radius: 14px; padding: 24px;
@@ -659,21 +660,7 @@
       <svg class="mark" viewBox="0 0 381 431" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M186.023 88.5C208.338 88.5 227.62 93.8411 243.846 104.544H243.845C260.149 115.101 268.269 132.128 268.269 155.508C268.268 167.805 265.396 178.539 259.635 187.693L259.636 187.694C254.178 196.481 247.274 203.448 238.929 208.591C246.521 222.05 254.018 235.606 261.417 249.259L267.171 259.438C272.925 269.598 278.679 279.703 284.434 289.752L284.862 290.5H228.812L228.67 290.238C222.57 279.004 216.568 267.769 210.665 256.535L210.664 256.532C204.816 245.207 198.967 233.978 193.118 222.847C191.623 223.019 190.045 223.105 188.385 223.105H157.898V290.5H108.5V88.5H186.023ZM157.898 183.384H185.139C194.497 183.384 202.051 181.041 207.844 176.399C213.808 171.581 216.806 164.837 216.806 156.099C216.806 146.548 213.891 139.624 208.147 135.213L208.141 135.208C202.553 130.769 194.71 128.518 184.548 128.518H157.898V183.384Z" fill="#183757"/><path d="M258 359L122 359C66.7715 359 22 314.228 22 259L22 122C22 66.7715 66.7715 22 122 22L259 22C314.228 22 359 66.7715 359 122L359 408.5" stroke="#183757" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <blockquote>"I brought Dylan in to automate high-labor internal operations at my billing company. He spent time on-site observing our workflows and talking with my staff about what kept them away from revenue-generating work — then built sustainable systems around what he learned. The results: our team saves roughly 200 labor hours annually, and within the first 60 days the financial impact had already reached six figures. Just as important, Dylan built these systems with our long-term mission in mind — we've been able to extend the foundations he laid rather than rebuild them. I'd recommend Dylan to any company looking for similar results."</blockquote>
       <div class="attr">— Rob Manjura · CEO, Inga Ellzey Billing Companies</div>
-      <div class="lab-card">
-        <div class="shot placeholder">
-          <div class="ph-inner">
-            <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v11H4z"/><path d="M8 20h8"/><path d="M9 9.5l2 2-2 2"/><path d="M13.5 13.5h3"/></svg>
-            <div class="ph-title">DEPLOYED FOR THE COMMUNITY</div>
-            <div class="ph-sub">Agents in the server, coding alongside the team</div>
-          </div>
-        </div>
-        <div class="inner">
-          <div class="tag">SHARED AGENT WORKSPACE</div>
-          <h3>Multi-Developer Agent Harness in Discord</h3>
-          <p>A deployed agent harness wired into a community Discord server, so every developer in it can talk to the agent in-channel and build together rather than each running their own setup. The team uses it to collaborate on Discord-bot automation &mdash; commands, event handlers and scheduled jobs &mdash; turning bot work into a shared, conversational workflow: ask in chat, get the change written, review it, ship it. Hosted on dedicated infrastructure and reachable by the whole server.</p>
-          <div class="stack">Agent harness · Discord · Python · scheduled automation</div>
-        </div>
-      </div>
+      
 
     </div>
   </div>
@@ -711,13 +698,7 @@
 
     <div class="lab-grid">
       <div class="lab-card">
-        <div class="shot placeholder">
-          <div class="ph-inner">
-            <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="1.4" stroke-linecap="round"><rect x="3" y="3" width="18" height="14" rx="2"/><circle cx="12" cy="10" r="3.2"/><path d="M8 21h8"/></svg>
-            <div class="ph-title">VENUE PHOTO PENDING</div>
-            <div class="ph-sub">Arduino-free custom CV build · live at a commercial venue</div>
-          </div>
-        </div>
+        <div class="shot"><img loading="lazy" decoding="async" width="900" height="507" src="assets/wall-venue.webp" alt="Camera-tracked interactive projection wall running live at a commercial venue"></div>
         <div class="inner">
           <div class="tag">CUSTOM SOFTWARE + DRIVERS</div>
           <h3>Interactive Projection Wall</h3>
@@ -762,6 +743,23 @@
           <div class="tag">AGENT SAFETY</div>
           <h3>Autonomous Agent Harness</h3>
           <p>An agent harness with granular permission gating — scoped filesystem writes, destructive-action blocks, and a full audit trail — making unattended LLM coding agents safe to run on production-adjacent machines.</p>
+        </div>
+      </div>
+      <div class="lab-card">
+        <div class="shot" style="background:#0E1726;padding:18px">
+          <div class="term">
+            <span class="k">$</span> harness attach --server community-discord<br>
+            <span class="g">&check;</span> shared session &middot; 4 developers &middot; one agent<br>
+            <span class="k">@dev-a</span> add a /leaderboard command<br>
+            <span class="k">@dev-b</span> and log the results to the channel<br>
+            <span class="g">&check;</span> patch written &middot; tests green &middot; shipped from chat
+          </div>
+        </div>
+        <div class="inner">
+          <div class="tag">SHARED AGENT WORKSPACE</div>
+          <h3>Multi-Developer Agent Harness in Discord</h3>
+          <p>A deployed agent harness wired into a community Discord server, so every developer in it can talk to the agent in-channel and build together rather than each running their own setup. The team uses it to collaborate on Discord-bot automation &mdash; commands, event handlers and scheduled jobs &mdash; turning bot work into a shared, conversational workflow: ask in chat, get the change written, review it, ship it. Hosted on dedicated infrastructure and reachable by the whole server.</p>
+          <div class="stack">Agent harness · Discord · Python · scheduled automation</div>
         </div>
       </div>
     </div>
